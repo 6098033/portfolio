@@ -41,7 +41,7 @@
       Hi, I am <strong>Vishuddha Vithanage</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">full stack developer</p>
-    <img src="img/Vishuddha.jpg" alt="a picture of Jane Smith smiling" class="intro__img">
+    <img src="img/Vishuddha.jpg" alt="a picture of Vishuddha" class="intro__img">
   </section>
 
 
@@ -94,6 +94,31 @@
 
   <!-- My Work -->
   <section class="my-work" id="work">
+    <div id="project_card_container">button</div>
+    <div id="injected-react-content"></div>
+    <script type="text/babel">
+       class RootComponent extends React.Component {
+          render() {
+            return <div className="portfolio">
+              <MyComponent />
+              <MyComponent />
+            </div>;
+          }
+        }
+
+        class MyComponent extends React.Component {
+          render() {
+            return (<a href="portfolio-item.html" className="portfolio__item">
+              <h1>hi</h1>
+              <img src="img/portfolio-01.png" alt="" className="portfolio__img"></img>
+            </a>);
+          }
+        }
+
+        const domContainer1 = document.querySelector('#injected-react-content');
+        ReactDOM.render(React.createElement(RootComponent), domContainer1);
+    </script>
+
     <h2 class="section__title section__title--work">My work</h2>
     <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
 
@@ -101,6 +126,7 @@
       <!-- Portfolio item 01 -->
       <a href="portfolio-item.html" class="portfolio__item">
         <img src="img/portfolio-01.png" alt="" class="portfolio__img">
+
       </a>
 
       <!-- Portfolio item 02 -->
@@ -181,6 +207,11 @@
 
 
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- Load our React component. -->
+  <script src="js/project_card.js"></script>
 
 </body>
 

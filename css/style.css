@@ -297,7 +297,7 @@ header {
     background-color: var(--clr-dark);
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: center;
 }
@@ -394,6 +394,10 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.portfolio1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
