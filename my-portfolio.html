@@ -89,19 +89,24 @@
         consequat.</p>
     </div>
 
-    <img src="img/dev-jane-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+    <img src="img/vishu-photo-02.jpg" alt="vishuddha photo" class="about-me__img">
   </section>
 
   <!-- My Work -->
+
   <section class="my-work" id="work">
-    <div id="project_card_container">button</div>
-    <div id="injected-react-content"></div>
-    <script type="text/babel">
-       class RootComponent extends React.Component {
+    <h2 class="section__title section__title--work">My work</h2>
+    <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+
+      <div id="project_card_container">button</div>
+      <div id="injected-react-content"></div>
+      <script type="text/babel">
+        class RootComponent extends React.Component {
           render() {
             return <div className="portfolio">
               <MyComponent />
-              <MyComponent />
+              <MyComponent1 />
             </div>;
           }
         }
@@ -109,18 +114,24 @@
         class MyComponent extends React.Component {
           render() {
             return (<a href="portfolio-item.html" className="portfolio__item">
-              <h1>hi</h1>
               <img src="img/portfolio-01.png" alt="" className="portfolio__img"></img>
             </a>);
           }
         }
 
+         class MyComponent1 extends React.Component {
+            render() {
+              return (<a href="portfolio-item.html" className="portfolio__item">
+                <img src="img/portfolio-02.png" alt="" className="portfolio__img"></img>
+              </a>);
+            }
+          }
+
         const domContainer1 = document.querySelector('#injected-react-content');
         ReactDOM.render(React.createElement(RootComponent), domContainer1);
-    </script>
+      </script>
 
-    <h2 class="section__title section__title--work">My work</h2>
-    <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
 
     <div class="portfolio">
       <!-- Portfolio item 01 -->
